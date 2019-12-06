@@ -1,6 +1,3 @@
-# 2002-3
-To do List, Second day of Software Development
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -11,36 +8,60 @@ To do List, Second day of Software Development
 <title>CodePen - 2002-3</title>
 <style>
   h1{
-  color:rgb(280,0,150); 
+  color:rgb(300,88,150);
+  background-image:url("http://digitalimagemakerworld.com/images/pink-glitter-wallpaper/38120261-pink-glitter-wallpaper.jpg");
+  background-repeat: repeat-y;
+  
+  
+  margin-bottom:-25px
 }
 
-#mainlist{
-  font-size: 180%;
-  background-color:
+#mainList{
+    font-size:250%;
 }
 
 .odd{
-  background-color:rgba(225,225,265,0);
+  background-color:rgba(225,225,225,.0)
 }
 
 .even{
-  background-color:rgba(225,225,300,0);
+  background-color:rgba(100,100,100,0);
 }
 
-.alist{
-  color:hotpink;
+.aList{
+  color:#FA8FAA;
   font-size:25px;
-  background-image:url("http://i48.fastpic.ru/big/2012/1120/33/6dfe090d37297946248ef2e28b452e33.png");
+  background-image:url("https://media0.giphy.com/media/QmZmvRoZIUNP2/giphy.gif");
+  background-repeat: repeat-y;
+  
+  
+   
+}
+
+#add{
+  background-image: url("http://images2.fanpop.com/images/photos/7500000/Butterflies-butterflies-7572197-396-307.gif"); 
+  background-size: 18% 100%;
+    background-color: transparent; 
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border: none;
+    height: 30px;           
+    padding-left: 16px;    
+    vertical-align: middle; 
+  font-size:20px;
+    font-family: "Lucida Console", Times, serif;
+  color:transparent;
+   font-weight:900px;
 }
 </style>
 </head>
 <body translate="no">
-<h1 id="mainlist">To do list</h1>
-<ul class="alist">
-<li class="odd">Do Math Homework</li>
-<li class="even"> Eat din din</li>
+<h1 id="mainList">To do list</h1>
+<ul class="aList" id="myList">
+<li class="odd">Do math homework</li>
+<li class="even">Eat dinner</li>
 </ul>
-<button id="add">Add</button>
+<button id="add">Press ME PLEAASEJI</button>
 <input id="item">
 <script id="rendered-js">
       console.clear();
@@ -48,20 +69,16 @@ console.log("hello world");
 
 const addBtn = document.getElementById("add");
 
-addBtn.addEventListener('click',addItem)
+addBtn.addEventListener("click", addItem);
 
-function addItem(e){
-  const theItem=document.getElementById("item").value;
-  
-  console.log('add item');
+function addItem(e) {
+  const theItem = document.getElementById("item").value;
+  console.log("add item", theItem);
   var node = document.createElement("li");
   var textnode = document.createTextNode(theItem);
   node.appendChild(textnode);
-  document.getElementsById("myList").appendChild(node);
-  
-  
+  document.getElementById("myList").appendChild(node);
 }
     </script>
 </body>
 </html>
-
